@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 континентов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/bundle.css">
+	<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<!--     <header class="header">
+        <div class="header__container">
+            <div class="header__logo-container">
+                <div class="header__logo">
+                    <a href="#"><img src="./build/images/header-logo.png" alt="logo-image"></a>
+                </div>
+                <div class="header__logo-caption">
+                    <p class="logo-caption">Лучшие детские курорты и маршруты</p>
+                </div>
+            </div>
+            <div class="header__contacts">
+                <div class="header__number">
+                    <p class="number-caption">Есть вопросы? Звоните</p>
+                    <a class="number" href="tel:+7 (8182) 20-80-10">+7 (8182) 20-80-10</a>
+                    <a class="number" href="tel:+7 (960) 002-80-10">+7 (960) 002-80-10</a>
+                </div>
+                <button class="header__btn">Обратный звонок</button>
+            </div>
+        </div>
+        <div class="header__thumb">
+            <h1 class="thumb-heading">Детский отдых</h1>
+            <p class="thumb-subheading">Путёвки в лучшие лагеря по ценам ниже рынка на 20%</p>
+            <div class="header__features">
+                <div class="grid-container">
+                    <div class="feature feature-1">
+                        <img src="./build/images/shield-image.png" alt="shield-image">
+                        <div class="feature-text">
+                            <p class="first feature-heading">Мы сотрудничаем только с лицензированными лагерями, прошедшими проверку контролирующими 
+                                органами</p>
+                            <p class="feature-subheading">Наши дети в безопасности</p>
+                        </div>
+                    </div>
+                    <div class="feature feature-2">
+                        <img src="./build/images/wallet-image.png" alt="wallet-image">
+                        <div class="feature-text">
+                            <p class="feature-heading">Путевки частично оплачиваются из бюджета</p>
+                            <p class="feature-subheading">Вся информация и документы в офисе</p>
+                        </div>
+                    </div>
+                    <div class="feature feature-3">
+                        <img src="./build/images/girl-image.png" alt="girl-image">
+                        <div class="feature-text">
+                            <p class="third feature-heading">Профессиональные вожатые и педагоги с опытом работы в лагерях от 3 
+                                до 30 лет</p>
+                            <p class="feature-subheading">Во время отдыха педагоги всегда на связи</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="consultation">
+        <h2 class="consultation-heading">Мы готовы дать Вам подробную консультацию</h2>
+        <p class="consultation-subheading">Поможем правильно подобрать путёвку для Вашего ребёнка под любой 
+            бюджет!</p>
+        <img class='line' src="./build/images/wave-line.png" alt="wave-line">
+        <p class="form-caption">Для этого заполните форму ниже - мы перезвоним Вам через 60 секунд</p>
+        <div class="consultation__form">
+            <input type="text" placeholder="Ваше имя">
+            <input type="tel" placeholder="Ваш телефон">
+            <button class="consultation__btn">Получить консультацию</button>
+        </div>
+        <p class="form-phone">или перезвоните нам по телефону:<img class="phone-icon" 
+            src="./build/images/phone-icon.png" alt=""><a class="number" href="tel:+7 (8182) 20-80-10">+7 (8182) 20-80-10</a></p>
+    </section> -->
+    <section class="camps">
+        <h2 class="camps-heading">Выберите путёвку в лучшие лагеря страны</h2>
+        <p class="camps-subheading">Каталог путёвок с ценами:</p>
+        <!-- Tab links -->
+        <div class="camps__tabs">
+            <div class="tab-1">
+                <button class="tablink" onclick="openCamp(event, 'oblast')">Детский отдых в Архангельской области</button>
+                <div class="tab-inner" id="oblast">
+                    <img class="tab-image" src="./build/images/tab-image.png" alt="tab-image">
+                    <h2 class="tab-heading">ДОЛ "Ватса-Парк"</h2>
+                    <p class="tab-paragraph">(Котласский район, Архангельская область)</p>
+                    <a href="#" class="tab-more">Подробнее</a>
+                </div>
+            </div>
+            <div class="tab-2">
+                <button class="tablink" onclick="openCamp(event, 'russia')">Детский отдых по России</button>
+                <div class="tab-inner" id="russia">
+                    <img src="./build/images/tab-image.png" alt="tab-image">
+                    <h2 class="tab-heading">ДОЛ "Ватса-Парк"</h2>
+                    <p class="tab-paragraph">(Котласский район, Архангельская область)</p>
+                    <a href="#" class="tab-more">Подробнее</a>
+                </div>
+            </div>
+            <div class="tab-3">
+                <button class="tablink" onclick="openCamp(event, 'foreign')">Детский отдых за рубежом</button>
+                <div class="tab-inner" id="foreign">
+                    <img src="./build/images/tab-image.png" alt="tab-image">
+                    <h2 class="tab-heading">ДОЛ "Ватса-Парк"</h2>
+                    <p class="tab-paragraph">(Котласский район, Архангельская область)</p>
+                    <a href="#" class="tab-more">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--     <section class="proposal">
+        <h2 class="proposal-heading">Специальное предложение - успейте забронировать!</h2>
+        <p class="proposal-subheading">Путёвка в детский оздоровительный лагерь "Лазуровый берег"</p>
+        <p class="term">на 18 дней всего<span class="price">за 25800 рублей!</span></p>
+        <div class="proposal__slider">
+            <div class="slider-item">
+                <img src="./build/images/slider-1.png" alt="children-image">
+            </div>
+            <div class="slider-item">
+                <img src="./build/images/slider-2.png" alt="children-image">
+            </div>
+            <div class="slider-item">
+                <img src="./build/images/slider-3.png" alt="children-image">
+            </div>
+            <div class="slider-item">
+                <img src="./build/images/slider-4.png" alt="children-image">
+            </div>
+        </div>
+        <div class="proposal__features">
+            <div class="feature">
+                <img src="./build/images/sea-image.png" alt="">
+                <p class="feature-descr">Первая береговая линия - 50 метров до моря</p>
+            </div>
+            <div class="feature">
+                <img src="./build/images/bed-image.png" alt="">
+                <p class="feature-descr">Размещение: все номера трёхместные</p>
+            </div>
+            <div class="feature">
+                <img src="./build/images/balcony-image.png" alt="">
+                <p class="feature-descr">В номере все удобства, есть лоджии</p>
+            </div>
+        </div>
+        <div class="proposal__container">
+            <h2 class="form-heading">Получите полную информацию о путёвке от наших специалистов</h2>
+            <p class="form-subheading">Для этого заполните форму ниже - мы перезвоним Вам через 60 секунд</p>
+            <div class="proposal__form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="tel" placeholder="Ваш телефон">
+                <button class="proposal__btn">Получить консультацию</button>
+            </div>
+            <p class="form-phone">или перезвоните нам по телефону:<img class="phone-icon" 
+                src="./build/images/phone-icon.png" alt=""><a class="number" href="tel:+7 (8182) 20-80-10">+7 (8182) 20-80-10</a></p>
+        </div>
+    </section>
+    <section class="certificate">
+        <div class="certificate__description">
+            <div class="image">
+                <img class='happy-holi' src="./build/images/happy-holi.png" alt="happy-holi">
+                <img class="certificate-image" src="./build/images/certificate-image.png" alt="certificate-image">
+            </div>
+            <div class="text">
+                <h2 class="heading">Все граждане РФ, отдыхающие в детских лагерях, имеют право на социальную 
+                    поддержку государством</h2>
+                <p class="paragraph">Право ребёнка на частичную оплату путёвки подтверждается сертификатом,
+                    выдаваемым в органах местного самоуправления</p>
+                <p class="paragraph-2">Мы поможем Вам реализовать эту возможность!</p>
+                <p class="paragraph-3">Все документы оформляются у нас в офисе</p>
+            </div>
+        </div>
+        <div class="certificate__container">
+            <h2 class="form-heading">Не упустите возможность сэкономить до 16800 рублей на путёвке для Вашего
+                ребёнка</h2>
+            <p class="form-subheading">Узнайте, как получить сертификат на соцподдержку</p>
+            <p class="form-subheading-2">Для этого заполните форму ниже - мы перезвоним Вам для консультации</p>
+            <div class="certificate__form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="tel" placeholder="Ваш телефон">
+                <button class="proposal__btn">Получить консультацию</button>
+            </div>
+            <p class="form-phone">или перезвоните нам по телефону:<img class="phone-icon" 
+                src="./build/images/phone-icon.png" alt=""><a class="number" href="tel:+7 (8182) 20-80-10 ">+7 (8182) 20-80-10</a></p>
+        </div>
+    </section>
+    <section class="conditions">
+        <h2 class="heading">В лагерях, с которыми мы сотрудничаем, обеспечены все условия для комфортного
+            пребывания детей</h2>
+        <div class="conditions__list">
+            <div class="item 24-hours">
+                <img src="./build/images/24hours.png" alt="24hours-image">
+                <div class="text">
+                    <h2 class="item-heading">На связи в любой момент</h2>
+                    <p class="item-description">24 часа/сут на связи педагог, сопровождающий ребенка. Еще до поездки Вы можете 
+                        познакомиться с ним и обсудить особенности Вашего ребенка.</p>
+                </div>
+            </div>
+            <div class="item meals">
+                <img src="./build/images/plate-image.png" alt="plate-image">
+                <div class="text">
+                    <h2 class="item-heading">5-разовое питание</h2>
+                    <p class="item-description">Завтрак, обед, полдник, ужин, сонник. Разнообразное полноценное 
+                        питание от опытных поваров</p>
+                </div>
+            </div>
+            <div class="item safety">
+                <img src="./build/images/camera-image.png" alt="camera-image">
+                <div class="text">
+                    <h2 class="item-heading">Ограждённая территория вечером освещена</h2>
+                    <p class="item-description">Видеонаблюдение 24 часа/сут. Пропускной контроль</p>
+                </div>
+            </div>
+            <div class="item beach">
+                <img src="./build/images/umbrella-image.png" alt="umbrella-image">
+                <div class="text">
+                    <h2 class="item-heading">Собственные пляжи</h2>
+                    <p class="item-description">Чистые песчаные или галечные пляжи.Дежурная спасательная группа на 
+                        каждом пляже</p>
+                </div>
+            </div>
+            <div class="item sport">
+                <img src="./build/images/football-image.png" alt="football-image">
+                <div class="text">
+                    <h2 class="item-heading">Спортивные площадки на территории</h2>
+                    <p class="item-description">В каждом лагере предусмотрены специально оборудованные площадки для 
+                        активных игр детей</p>
+                </div>
+            </div>
+            <div class="item buildings">
+                <img src="./build/images/building-image.png" alt="building-image">
+                <div class="text">
+                    <h2 class="item-heading">Современные оборудованные корпуса</h2>
+                    <p class="item-description">Свежий ремонт в комнатах</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team">
+        <h2 class="heading">Компания "Семь континентов" - мы работаем с 2006 года на рынке туристических услуг</h2>
+        <h2 class="subheading">Более 11 лет в сфере организации детского отдыха</h2>
+        <div class="team__profile">
+                <div class="image">
+                    <img class='happy-holi' src="./build/images/happy-holi-2.png" alt="happy-holi">
+                    <img class="profile-image" src="./build/images/director-image.png" alt="profile-image">
+                </div>
+                <div class="profile-description">
+                    <h2 class="profile-heading">Елена Вячеславовна Траберг</h2>
+                    <h2 class="profile-subheading">директор компании "7 континентов"</h2>
+                    <ul class="profile-list">
+                        <li>Опыт работы</li>
+                        <li>Опыт работы</li>
+                        <li>Опыт работы</li>
+                        <li>Опыт работы</li>
+                        <li>Опыт работы</li>
+                    </ul>
+                </div>
+        </div>
+        <h2 class="member-heading">Наша дружная команда профессионалов своего дела</h2>
+        <div class="team__members">
+            <div class="member member-1">
+                <img src="./build/images/member-1.png" alt="">
+                <div class="member-description">
+                    <h3 class="member-name">Светлана Бедрицкая</h3>
+                    <p class="member-position">Руководитель "Школы Вожатского мастерства"</p>
+                </div>
+            </div>
+            <div class="member member-2">
+                <img src="./build/images/member-2.png" alt="">
+                <div class="member-description">
+                    <h3 class="member-name">Елена Земская</h3>
+                    <p class="member-position">Заместитель руководителя "Школы Вожатского мастерства"</p>
+                </div>
+            </div>
+            <div class="member member-3">
+                <img src="./build/images/member-3.png" alt="">
+                <div class="member-description">
+                    <h3 class="member-name">Марина Иванова</h3>
+                    <p class="member-position">Главный менеджер "Школы Вожатского мастерства"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="steps">
+        <h2 class="heading">Корпоративная школа профессиональных вожатых - гарантия безопасности Ваших детей</h2>
+        <p class="subheading">Каждый вожатый проходит дополнительное обучение в нашей школе - курс из 36
+            занятий по 2 часа</p>
+        <h2 class="steps-number">4 этапа обучения:</h2>
+        <div class="steps__list">
+            <div class="step step-1">
+                <p class="step-number">1 этап</p>
+                <img src="./build/images/learning.png" alt="">
+                <h3 class="step-name">Теоретическая часть</h3>
+                <ul class="step-details">
+                    <li>Возрастная физиология</li>
+                    <li>Оказание первой помощи</li>
+                    <li>Правила поощрения и наказания</li>
+                    <li>Стандартные и нестандартные ситуации</li>
+                </ul>
+            </div>
+            <div class="arrow">
+                <img src="./build/images/right-drawn-arrow.png" alt="right-drawn-arrow" class="right-arrow">
+            </div>
+            <div class="step step-2">
+                <p class="step-number">2 этап</p>
+                <img src="./build/images/dance.png" alt="">
+                <h3 class="step-name">Анимационное обучение</h3>
+                <ul class="step-details">
+                    <li>Знакомства</li>
+                    <li>Игры, квесты, тренинги</li>
+                    <li>Адаптация детей</li>
+                </ul>
+            </div>
+            <div class="arrow">
+                <img src="./build/images/right-drawn-arrow.png" alt="right-drawn-arrow" class="right-arrow">
+            </div>
+            <div class="step step-3">
+                <p class="step-number">3 этап</p>
+                <img src="./build/images/kneecap.png" alt="">
+                <h3 class="step-name">Практическое обучение</h3>
+                <ul class="step-details">
+                    <li>Оказание первой помощи</li>
+                    <li>Моделирование ситуаций и пути их разрешения</li>
+                </ul>
+            </div>
+            <div class="arrow">
+                <img src="./build/images/right-drawn-arrow.png" alt="right-drawn-arrow" class="right-arrow">
+            </div>
+            <div class="step step-4">
+                <p class="step-number">4 этап</p>
+                <img src="./build/images/exam.png" alt="">
+                <h3 class="step-name">Экзамен</h3>
+                <ul class="step-details">
+                    <li>3 вопроса: теория, анимация, практическая задача</li>
+                    <li>Выдача сертификата вожатого</li>
+                </ul>
+            </div>
+        </div>
+        <div class="steps__slider">
+            <div><img src="./build/images/slider-image-1.png" alt="slider-image"></div>
+            <div><img src="./build/images/slider-image-2.png" alt="slider-image"></div>
+            <div><img src="./build/images/slider-image-3.png" alt="slider-image"></div>
+            <div><img src="./build/images/slider-image-4.png" alt="slider-image"></div>
+            <div><img src="./build/images/slider-image-5.png" alt="slider-image"></div>
+            <div><img src="./build/images/slider-image-6.png" alt="slider-image"></div>
+        </div>
+    </section>
+    <section class="process">
+        <h2 class="heading">5 шагов к счастливому отдыху Вашего ребёнка</h2>
+        <div class="process__grid">
+            <div class="process-part">
+                <img src="./build/images/application.png" alt="application-image">
+                <p class="part-caption">Вы оставляете заявку на сайте</p>
+                <a href="#" class="process-link">Оставить заявку</a>
+            </div>
+            <div><img class="process-arrow" src="./build/images/right-drawn-arrow.png" alt="right-arrow"></div>
+            <div class="process-part">
+                <img src="./build/images/call-centre.png" alt="call-centre-image">
+                <p class="part-caption">Мы связываемся с Вами по телефону</p>
+            </div>
+            <div><img class="process-arrow" src="./build/images/right-drawn-arrow.png" alt="right-arrow"></div>
+            <div class="process-part">
+                <img src="./build/images/clipboard.png" alt="clipboard-image">
+                <p class="part-caption">Подбираем и бронируем подходящую путёвку</p>
+            </div>
+            <div class="process-part">
+                <img src="./build/images/post.png" alt="post-image">
+                <p class="part-caption">Вы получаете документы у нас в офисе или по почте</p>
+            </div>
+            <div><img class="process-arrow" src="./build/images/right-drawn-arrow.png" alt="right-arrow"></div>
+            <div class="process-part">
+                <img src="./build/images/people.png" alt="people-image">
+                <p class="part-caption">Проводим организационное собрание с вожатыми и родителями</p>
+            </div>
+            <div><img class="process-arrow" src="./build/images/right-drawn-arrow.png" alt="right-arrow"></div>
+            <div class="process-part">
+                <img src="./build/images/girl.png" alt="girl-image">
+                <p class="part-caption">Ваш ребёнок на незабываемом отдыхе</p>
+            </div>
+        </div>
+        <div class="confetti"><img class="confetti-image" src="./build/images/confetti.png" alt="confetti-image"></div>
+    </section>
+    <section class="licenses">
+        <h2 class="heading">Мы имеем все необходимые лицензии и входим в Единый Федеральный реестр туроператоров РФ 
+        под номером ВНТ-016164</h2>
+        <div class="licenses__list">
+            <div class="license">
+                <img src="./build/images/license.png" alt="license-image">
+                <p class="license-caption">Лицензия туроператора</p>
+            </div>
+            <div class="license">
+                <img src="./build/images/license.png" alt="license-image">
+                <p class="license-caption">Ассоциация туроператоров</p>
+            </div>
+            <div class="license">
+                <img src="./build/images/license.png" alt="license-image">
+                <p class="license-caption">Свидетельство о регистрации юридического лица</p>
+            </div>
+        </div>
+    </section>
+    <section class="awards">
+        <h2 class="heading">За 11 лет успешной работы мы получили множество наград и отзывов</h2>
+        <h3 class="subheading">Награды и благодарности федерального уровня</h3>
+        <div class="awards__slider">
+            <div>
+                <img src="./build/images/award.png" alt="award-image">
+            </div>
+            <div>
+                <img src="./build/images/award.png" alt="award-image">
+            </div>
+            <div>
+                <img src="./build/images/award.png" alt="award-image">
+            </div>
+            <div>
+                <img src="./build/images/award.png" alt="award-image">
+            </div>
+            <div>
+                <img src="./build/images/award.png" alt="award-image">
+            </div>
+        </div>
+        <h2 class="subheading-2">Благодарности от родителей</h2>
+        <div class="awards__slider">
+            <div>
+                <img src="./build/images/award.png" alt="award-image">
+            </div>
+            <div>
+                <img src="./build/images/award.png" alt="award-image">
+            </div>
+            <div>
+                <img src="./build/images/award.png" alt="award-image">
+            </div>
+            <div>
+                <img src="./build/images/award.png" alt="award-image">
+            </div>
+            <div>
+                <img src="./build/images/award.png" alt="award-image">
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__map">
+                <iframe class="ya-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Abc6f282422447463981887af71945d748d23dc70ac7ee40d317e2446005d265c&amp;source=constructor" width="80%" height="100%" frameborder="0"></iframe>
+            </div>
+            <div class="footer__info">
+                <h2 class="info-heading">Вы всегда можете получить полную информацию по путёвкам для детского отдыха 
+                    в нашем офисе</h2>
+                <div class="address">
+                    <p class="city">г. Архангельск</p>
+                    <p class="street">пр. Чумбарова-Лучинского, д.39, офис 28</p>
+                </div>
+                <div class="timetable">
+                    <h3 class="timetable-heading">Режим работы</h3>
+                    <p>Пн-Пт с 10:00 до 19:00</p>
+                    <p>Сб с 11:00 до 16:00</p>
+                    <p>Вс - выходной</p>
+                </div>
+                <div class="contacts">
+                    <h3 class="contacts-heading">Контакты</h3>
+                    <a href="tel:+7 (8182) 20-80-10 ">+7 (8182) 20-80-10</a>
+                    <a href="tel:+7 (960) 002 80 10 ">+7 (960) 002 80 10</a>
+                </div>
+                <p class="warning">Если возникли вопросы, Вы можете написать нам на электронную почту</p>
+                <p class="e-mail">7knt@mail.ru</p>
+            </div>
+        </div>
+    </footer> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="build/js/min.js"></script>
+</body>
+</html>
